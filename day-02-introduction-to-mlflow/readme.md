@@ -1,6 +1,6 @@
 # Day 2
 
-## Topic: MLflow Fundamentals
+## Topic: Introduction to MLflow
 
 ### What is MLflow?
 - **MLflow** is an open-source platform for managing the **end-to-end machine learning lifecycle**.  
