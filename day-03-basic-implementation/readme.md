@@ -80,4 +80,3 @@ mlruns/
 * MLflow makes experiment tracking **easy to set up and lightweight**.
 * Experiments organize multiple runs; runs log **code, params, metrics, and artifacts**.
 * The `mlruns/` folder is automatically created for storing **all tracking metadata**.
-* Models logged with MLflow are **packaged with code, requirements, and metadata** → ready for deployment.
