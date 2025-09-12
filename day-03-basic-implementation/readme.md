@@ -1,4 +1,4 @@
-# ML Ops with MLflow – Day 3
+# Day 3
 
 ## Topic: Basic MLflow Implementation
 
