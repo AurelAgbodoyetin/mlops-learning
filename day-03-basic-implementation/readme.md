@@ -29,13 +29,6 @@
 ```python
    mlflow.log_param("alpha", alpha)
    mlflow.log_param("l1_ratio", l1_ratio)
-   mlflow.log_metric("rmse", rmse)
-   mlflow.log_metric("r2", r2)
-```
-4. **Log parameters, metrics, and the trained model**
-```python
-   mlflow.log_param("alpha", alpha)
-   mlflow.log_param("l1_ratio", l1_ratio)
 
    mlflow.log_metric("rmse", rmse)
    mlflow.log_metric("r2", r2)
