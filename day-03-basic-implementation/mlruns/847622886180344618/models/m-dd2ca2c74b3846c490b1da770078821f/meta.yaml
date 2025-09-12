@@ -1,0 +1,10 @@
+artifact_location: file:///Users/masterbee/Desktop/Upgrade%20Skills/Udemy%20-%20MLflow%20in%20Action%20-%20Master%20the%20art%20of%20MLOps%20using%20MLflow%20tool%202024-8/code/day-03-basic-implementation/mlruns/847622886180344618/models/m-dd2ca2c74b3846c490b1da770078821f/artifacts
+creation_timestamp: 1757668141760
+experiment_id: '847622886180344618'
+last_updated_timestamp: 1757668144495
+model_id: m-dd2ca2c74b3846c490b1da770078821f
+model_type: null
+name: elasticnet-model
+source_run_id: 234f19a0e476438a8e019fec1f9d919d
+status: 2
+status_message: null
