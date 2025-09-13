@@ -6,6 +6,7 @@ import numpy as np
 from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import ElasticNet
+from pathlib import Path # <- New line
 
 # Import MLflow and its sklearn module
 import mlflow    
@@ -56,15 +57,27 @@ if __name__ == "__main__":
     l1_ratio = 0.5
 
     # Set the tracking URI to default (local file-based)
-    mlflow.set_tracking_uri("./mytracks")  # <- New line
+    mlflow.set_tracking_uri("")
 
     # Print the current tracking URI
     print("Current Tracking URI: ", mlflow.get_tracking_uri())  # <- New line
 
-    # Set the experiment name in MLflow
-    experiment = mlflow.set_experiment(experiment_name="ElasticNet-Wine-Quality-1")  
+    # Create a new experiment
+    experiment_obj = mlflow.set_experiment(experiment_name="ElasticNet-Wine-Quality-1")
 
-    with mlflow.start_run(experiment_id=experiment.experiment_id): 
+    # Note that now we have an Experiment object, not just an ID
+    # A new experiment is created only if it doesn't already exist
+    experiment_id = experiment_obj.experiment_id
+
+    # Print experiment details
+    print(f"Experiment Name: {experiment_obj.name}") # <- New line
+    print(f"Experiment ID: {experiment_id}") # <- New line
+    print(f"Artifact Location: {experiment_obj.artifact_location}") # <- New line
+    print(f"Tags: {experiment_obj.tags}") # <- New line
+    print(f"Lifecycle Stage: {experiment_obj.lifecycle_stage}") # <- New line
+    print(f"Creation Timestamp: {experiment_obj.creation_time}") # <- New line 
+
+    with mlflow.start_run(experiment_id=experiment_id): 
         # Create and train the ElasticNet model with specified parameters
         lr = ElasticNet(alpha=alpha, l1_ratio=l1_ratio, random_state=42)
         lr.fit(X_train, y_train)
@@ -88,4 +101,4 @@ if __name__ == "__main__":
         mlflow.log_metric("r2", r2) 
 
         # Log the trained model to MLflow
-        mlflow.sklearn.log_model(lr, name="elasticnet-model", input_example=X_test.iloc[0, 1])
+        mlflow.sklearn.log_model(lr, name="elasticnet-model", input_example=X_test.iloc[0:])
