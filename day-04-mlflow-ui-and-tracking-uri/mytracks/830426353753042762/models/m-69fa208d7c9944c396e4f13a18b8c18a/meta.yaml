@@ -1,0 +1,11 @@
+artifact_location: /Users/masterbee/Desktop/Upgrade Skills/Udemy - MLflow in Action
+  - Master the art of MLOps using MLflow tool 2024-8/code/day-04-mlflow-ui-and-tracking-uri/mytracks/830426353753042762/models/m-69fa208d7c9944c396e4f13a18b8c18a/artifacts
+creation_timestamp: 1757746799862
+experiment_id: '830426353753042762'
+last_updated_timestamp: 1757746802101
+model_id: m-69fa208d7c9944c396e4f13a18b8c18a
+model_type: null
+name: elasticnet-model
+source_run_id: 89ba578e4f6448f68b10af97861942dd
+status: 2
+status_message: null

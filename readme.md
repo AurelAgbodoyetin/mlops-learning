@@ -24,7 +24,8 @@ This repo is my attempt at breaking that cycle—building not just models, but r
 📁 mlops-learning/
 ├── 📁 day-01-mlops-fundamentals/
 ├── 📁 day-02-introduction-to-mlflow/
-└── 📁 day-03-basic-implementation/
+├── 📁 day-03-basic-implementation/
+└── 📁 day-04-mlflow-ui-and-tracking-uri/
 ```
 
 ## 🛠️ Technologies Used

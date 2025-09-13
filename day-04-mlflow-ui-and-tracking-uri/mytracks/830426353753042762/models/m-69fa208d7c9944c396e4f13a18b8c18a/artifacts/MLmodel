@@ -1,0 +1,23 @@
+artifact_path: /Users/masterbee/Desktop/Upgrade Skills/Udemy - MLflow in Action -
+  Master the art of MLOps using MLflow tool 2024-8/code/day-04-mlflow-ui-and-tracking-uri/mytracks/830426353753042762/models/m-69fa208d7c9944c396e4f13a18b8c18a/artifacts
+flavors:
+  python_function:
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.sklearn
+    model_path: model.pkl
+    predict_fn: predict
+    python_version: 3.12.11
+  sklearn:
+    code: null
+    pickled_model: model.pkl
+    serialization_format: cloudpickle
+    sklearn_version: 1.7.2
+mlflow_version: 3.3.2
+model_id: m-69fa208d7c9944c396e4f13a18b8c18a
+model_size_bytes: 879
+model_uuid: m-69fa208d7c9944c396e4f13a18b8c18a
+prompts: null
+run_id: 89ba578e4f6448f68b10af97861942dd
+utc_time_created: '2025-09-13 06:59:59.874002'

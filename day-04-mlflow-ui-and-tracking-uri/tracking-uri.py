@@ -8,8 +8,8 @@ from sklearn.model_selection import train_test_split
 from sklearn.linear_model import ElasticNet
 
 # Import MLflow and its sklearn module
-import mlflow    # <- New line
-import mlflow.sklearn      # <- New line
+import mlflow    
+import mlflow.sklearn      
 
 # Function to calculate evaluation metrics
 def eval_metrics(actual, pred):
@@ -55,10 +55,13 @@ if __name__ == "__main__":
     alpha = 0.5
     l1_ratio = 0.5
 
-    # Set the experiment name in MLflow
-    experiment = mlflow.set_experiment(experiment_name="ElasticNet-Wine-Quality-1")  # <- New line
+    mlflow.set_tracking_uri("./mytracks")  # <- New line
+    print("Current Tracking URI: ", mlflow.get_tracking_uri())  # <- New line 
 
-    with mlflow.start_run(experiment_id=experiment.experiment_id): # <- New line
+    # Set the experiment name in MLflow
+    experiment = mlflow.set_experiment(experiment_name="ElasticNet-Wine-Quality-1")  
+
+    with mlflow.start_run(experiment_id=experiment.experiment_id): 
         # Create and train the ElasticNet model with specified parameters
         lr = ElasticNet(alpha=alpha, l1_ratio=l1_ratio, random_state=42)
         lr.fit(X_train, y_train)
@@ -73,13 +76,13 @@ if __name__ == "__main__":
         print_metrics(alpha, l1_ratio, rmse, mae, r2)
 
         # Log the model parameters to MLflow
-        mlflow.log_param("alpha", alpha) # <- New line
-        mlflow.log_param("l1_ratio", l1_ratio) # <- New line
+        mlflow.log_param("alpha", alpha) 
+        mlflow.log_param("l1_ratio", l1_ratio) 
 
         # Log the evaluation metrics to MLflow
-        mlflow.log_metric("rmse", rmse) # <- New line
-        mlflow.log_metric("mae", mae) # <- New line
-        mlflow.log_metric("r2", r2) # <- New line
+        mlflow.log_metric("rmse", rmse) 
+        mlflow.log_metric("mae", mae) 
+        mlflow.log_metric("r2", r2) 
 
         # Log the trained model to MLflow
-        mlflow.sklearn.log_model(lr, name="elasticnet-model", input_example=X_test.iloc[0, 1]) # <- New line
+        mlflow.sklearn.log_model(lr, name="elasticnet-model", input_example=X_test.iloc[0, 1])
