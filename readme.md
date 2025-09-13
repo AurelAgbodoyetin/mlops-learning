@@ -25,7 +25,18 @@ This repo is my attempt at breaking that cycle—building not just models, but r
 ├── 📁 day-01-mlops-fundamentals/
 ├── 📁 day-02-introduction-to-mlflow/
 ├── 📁 day-03-basic-implementation/
-└── 📁 day-04-mlflow-ui-and-tracking-uri/
+├── 📁 day-04-mlflow-ui-and-tracking-uri/
+├── 📁 day-05-experiment-management/
+├── 📁 day-06-run-management/
+├── 📁 day-07-advanced-logging-and-batch-operations/
+├── 📁 day-08-autologging-and-automation/
+├── 📁 day-09-tracking-server-architecture/
+├── 📁 day-10-model-components-and-architecture/
+├── 📁 day-11-model-signatures-and-apis/
+├── 📁 day-12-custom-models-and-evaluation/
+├── 📁 day-13-advanced-evaluation-and-model-registry/
+├── 📁 day-14-mlflow-projects-and-client/
+└── 📁 day-15-advanced-client-operations-and-production-project/
 ```
 
 ## 🛠️ Technologies Used
@@ -34,5 +45,49 @@ This repo is my attempt at breaking that cycle—building not just models, but r
 - **Python** - Primary programming language
 - **Scikit-learn** - Machine learning models and pipelines
 - **Pandas & NumPy** - Data manipulation and analysis
-- **Matplotlib/Seaborn** - Data visualization
-- **Docker** - Containerization (advanced topics)
+
+## 🚦 Getting Started
+
+### Prerequisites
+```bash
+python >= 3.7
+pip or conda package manager
+```
+
+### Installation
+```bash
+# Clone the repository
+git clone https://github.com/AurelAgbodoyetin/mlops-learning.git
+cd mlops-learning
+
+# Install dependencies
+pip install -r requirements.txt
+
+# Verify MLflow installation
+mlflow --version
+```
+
+### Running Examples
+```bash
+# Navigate to any day's folder
+cd day-03-basic-implementation
+
+# Run the example
+python mlflow_with_sklearn.py
+
+# Launch MLflow UI to view results
+mlflow ui
+```
+
+## 🤝 Contributing
+
+This is a personal learning repository, but feel free to:
+- Open issues for questions or discussions
+- Submit PRs for improvements or corrections
+- Share your own MLOps learning experiences
+
+## 📄 License
+
+This project is licensed under the MIT License - see the [LICENSE](LICENSE) file for details.
+
+**"The journey of mastering MLOps, one experiment at a time."** 📊✨
