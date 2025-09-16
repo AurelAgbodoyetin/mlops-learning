@@ -113,23 +113,23 @@ if __name__ == "__main__":
         mlflow.sklearn.log_model(lr, name="elasticnet-model", input_example=X_test.iloc[0:])
     # The run is automatically ended when exiting the 'with' block
 
-mlflow.start_run()  # <- New line
-# Create and train the ElasticNet model with specified parameters
-lr = ElasticNet(alpha=alpha, l1_ratio=l1_ratio, random_state=42)
-lr.fit(X_train, y_train)
+    mlflow.start_run()  # <- New line
+    # Create and train the ElasticNet model with specified parameters
+    lr = ElasticNet(alpha=alpha, l1_ratio=l1_ratio, random_state=42)
+    lr.fit(X_train, y_train)
 
-# Use the trained model to make predictions on test data
-y_pred = lr.predict(X_test)
+    # Use the trained model to make predictions on test data
+    y_pred = lr.predict(X_test)
 
-# Calculate evaluation metrics by comparing predictions with actual values
-(rmse, mae, r2) = eval_metrics(y_test, y_pred)
+    # Calculate evaluation metrics by comparing predictions with actual values
+    (rmse, mae, r2) = eval_metrics(y_test, y_pred)
 
-# Print the results
-print_metrics(alpha, l1_ratio, rmse, mae, r2)
+    # Print the results
+    print_metrics(alpha, l1_ratio, rmse, mae, r2)
 
-# Log the model parameters and metrics to MLflow
-log_model_params_and_metrics(lr, alpha, l1_ratio, rmse, mae, r2) # <- New line
+    # Log the model parameters and metrics to MLflow
+    log_model_params_and_metrics(lr, alpha, l1_ratio, rmse, mae, r2) # <- New line
 
-# Log the trained model to MLflow
-mlflow.sklearn.log_model(lr, name="elasticnet-model", input_example=X_test.iloc[0:])
-mlflow.end_run()  # <- New line
+    # Log the trained model to MLflow
+    mlflow.sklearn.log_model(lr, name="elasticnet-model", input_example=X_test.iloc[0:])
+    mlflow.end_run()  # <- New line
