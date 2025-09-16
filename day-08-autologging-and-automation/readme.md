@@ -15,6 +15,7 @@
 
 * `mlflow.autolog()`
 * Enables autologging for **all supported libraries** detected in the workflow.
+* Supports libraries like Keras/TensorFlow, LightGBM, Paddle, PySpark, PyTorch, Scikit-learn, Spark, Statsmodels, XGBoost
 
 ### Library-Specific Autologging
 
